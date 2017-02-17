@@ -24,7 +24,7 @@ class ucclient_db {
 
 	var $goneaway = 5;
 
-	function connect($dbhost, $dbuser, $dbpw, $dbname = 'splitmarket', $dbcharset = '', $pconnect = 0, $tablepre='', $time = 0) {
+	function connect($dbhost, $dbuser, $dbpw, $dbname = 'splitMarket_db', $dbcharset = '', $pconnect = 0, $tablepre='', $time = 0) {
 		$this->dbhost = $dbhost;
 		$this->dbuser = $dbuser;
 		$this->dbpw = $dbpw;
@@ -57,8 +57,8 @@ class ucclient_db {
 		if($dbname) {
 			mysql_select_db($dbname, $this->link);
 		} else {
-			$this->dbname = "splitmarket";
-			mysql_select_db("splitmarket", $this->link) or die(mysql_error());
+			$this->dbname = "splitMarket_db";
+			mysql_select_db("splitMarket_db", $this->link) or die(mysql_error());
 		}
 
 	}

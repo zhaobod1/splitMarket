@@ -3,10 +3,10 @@
 $db_host   = "localhost:3306";
 
 // database name
-$db_name   = "splitmarket";
+$db_name   = "splitMarket_db";
 
 // database username
-$db_user   = "splitmarket";
+$db_user   = "splitMarket";
 
 // database password
 $db_pass   = "huo15com";
