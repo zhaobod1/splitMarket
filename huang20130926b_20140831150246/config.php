@@ -1,0 +1,45 @@
+<?php
+	$b_table="area,bdrecord,bonus,bonuslaiyuan,bonustime,chongzhi,city,email,goods,huikuan,information,lsbd,mail,member,news,orders,province,stockbuy,stockprice,stockrecord,systemparameters,systemyeji,tixian,to_admin,ulevel,ulevelup,zengjianjilu,zhuanhuan,zhuanzhang";
+	$tb[area]=1;
+$tb[bdrecord]=1;
+$tb[bonus]=2;
+$tb[bonuslaiyuan]=3;
+$tb[bonustime]=1;
+$tb[chongzhi]=1;
+$tb[city]=1;
+$tb[email]=1;
+$tb[goods]=1;
+$tb[huikuan]=1;
+$tb[information]=1;
+$tb[lsbd]=1;
+$tb[mail]=1;
+$tb[member]=2;
+$tb[news]=1;
+$tb[orders]=1;
+$tb[province]=1;
+$tb[stockbuy]=1;
+$tb[stockprice]=1;
+$tb[stockrecord]=1;
+$tb[systemparameters]=1;
+$tb[systemyeji]=1;
+$tb[tixian]=1;
+$tb[to_admin]=1;
+$tb[ulevel]=1;
+$tb[ulevelup]=1;
+$tb[zengjianjilu]=1;
+$tb[zhuanhuan]=1;
+$tb[zhuanzhang]=1;
+
+	$b_baktype=0;
+	$b_filesize=300;
+	$b_bakline=500;
+	$b_autoauf=1;
+	$b_dbname="huang20130926b";
+	$b_stru=1;
+	$b_strufour=0;
+	$b_dbchar="auto";
+	$b_beover=0;
+	$b_insertf="replace";
+	$b_autofield=",,";
+	$b_bakdatatype=0;
+	?>

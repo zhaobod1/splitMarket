@@ -1,0 +1,17 @@
+body				{margin:0px; font-size:12px; background-image:url(bg_login.png); background-position:bottom; background-repeat:repeat-x; background-color:#A2D5F0;}
+td, div				{font-size:12px;}		
+#login				{color:white; background-image:url(bg_login.png); background-position:bottom; background-repeat:repeat-x; background-color:#A2D5F0;}
+#login #root		{background-image:url(login_root.png);}
+#login #main		{background-image:url(login_main.png);}
+#login * td			{color:white;}
+#login a			{color:white; text-decoration:none;}
+#login .textbox		{width:180px}
+.TxtUserNameCssClass {
+	BORDER-TOP-WIDTH: 0px; PADDING-LEFT: 25px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: url(../Images/user_login_name.gif) no-repeat; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 165px; LINE-HEIGHT: 20px; HEIGHT: 21px; BORDER-RIGHT-WIDTH: 0px
+}
+.TxtPasswordCssClass {
+	BORDER-TOP-WIDTH: 0px; PADDING-LEFT: 25px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: url(../Images/user_login_password.gif) no-repeat; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 165px; LINE-HEIGHT: 20px; HEIGHT: 21px; BORDER-RIGHT-WIDTH: 0px
+}
+.TxtValidateCodeCssClass {
+	BORDER-TOP-WIDTH: 0px; PADDING-LEFT: 25px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: url(../Images/user_login_validatecode.gif) no-repeat; IME-MODE: disabled; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 91px; LINE-HEIGHT: 20px; HEIGHT: 21px; BORDER-RIGHT-WIDTH: 0px
+}

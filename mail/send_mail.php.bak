@@ -1,0 +1,40 @@
+<?php
+ require_once("class.phpmailer.php"); 
+ echo   $address=$_POST["address"];
+ 
+$subject="这里是主题";
+$mail = new PHPMailer();     //得到一个PHPMailer实例
+
+$mail->CharSet = "gb2312"; //设置采用gb2312中文编码
+$mail->IsSMTP();                    //设置采用SMTP方式发送邮件
+$mail->Host = "smtp.qq.com";    //设置邮件服务器的地址
+$mail->Port = 25;                           //设置邮件服务器的端口，默认为25
+
+$mail->From     = "878655436@qq.com"; //设置发件人的邮箱地址
+$mail->FromName = "878655436@qq.com";                       //设置发件人的姓名
+$mail->SMTPAuth = true;                                    //设置SMTP是否需要密码验证，true表示需要
+
+$mail->Username="878655436@qq.com";
+
+$mail->Password = "huoying456852";
+$mail->Subject = $subject;                                 //设置邮件的标题
+
+$mail->AltBody = "text/html";                                // optional, comment out and test
+
+
+$mail->Body = "<strong>这里是内容</strong>";                    
+
+$mail->IsHTML(true);                                        //设置内容是否为html类型
+//$mail->WordWrap = 50;                                 //设置每行的字符数
+$mail->AddReplyTo(" $address","");     //设置回复的收件人的地址
+
+
+$mail->AddAddress(" $address","");     //设置收件的地址
+if(!$mail->Send()) {                    //发送邮件
+echo "发送失败";
+} else {
+echo "发送成功";
+}
+
+
+?>

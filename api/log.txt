@@ -1,0 +1,270 @@
+
+********** updatecredit 更新用户积分 **********
+
+{"action":"updatecredit","uid":"36","credit":"0","amount":"764","time":"1484100944"}
+
+********** updatecredit 更新用户积分 end **********
+
+********** updatecredit db: **********
+
+{"version":"5.1.65-community","querynum":0,"link":null}
+
+********** updatecredit db: end **********
+
+********** updatecredit aUser **********
+
+CN34226
+
+********** updatecredit aUser end **********
+
+UPDATE `member` SET `shop_coin`='764' WHERE `nickname` = 'CN34226'
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：30,CN39208,111111,1483758039@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：30,CN39208,111111,1483758039@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：30,CN39208,111111,1483758039@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：30,CN39208,111111,1483758039@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：36,CN34226,111111,1484100033@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：18,admin,111111,1483722101@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***********主站 login **********
+
+登录成功：29,CN36052,778899,1483755922@163.com
+
+***********主站 login end**********
+
+********synlogin*********
+
+set_login 设置用户登录api --> systemstatus---open
+
+***************synlogout**************
+
+删除sessions
+
+***************synlogout end**************

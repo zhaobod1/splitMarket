@@ -1,0 +1,16 @@
+.table1
+{
+	background:#A3CDF8;
+}
+/* 这边定义了表格的背景，也就是边框的颜色 */
+.table1 td, .table1 th
+{
+	height:30px;
+	background:#FFFFFF;
+	font-size: 12px;
+} 
+.ziti 
+{
+	color: #333;
+	font-size: 12px;
+}
