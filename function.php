@@ -142,17 +142,19 @@ function checkNickNamebyispay($NickName){
 
 //会员登录验证
 function checkLogin($NickName,$PassWord){
-	$sql="select * from `Member` where nickname='".$NickName."' AND password1='".$PassWord."'";
-	$query=mysql_query($sql);
+	$sql="select * from `member` where nickname='".$NickName."' AND password1='".$PassWord."'";
+	$query=mysql_query($sql) or die(mysql_error());
 	if(mysql_num_rows($query) >= 1){
+
 		return true;
 	}else{
+
 		return false;	
 	}
 }
 //会员二级密码验证
 function checkPassword2($NickName,$PassWord2){
-	$sql="select * from `Member` where nickname='".$NickName."' AND password2='".$PassWord2."'";
+	$sql="select * from `member` where nickname='".$NickName."' AND password2='".$PassWord2."'";
 	$query=mysql_query($sql);
 	if(mysql_num_rows($query) >= 1){
 		return true;
@@ -162,7 +164,7 @@ function checkPassword2($NickName,$PassWord2){
 }
 //会员三级密码验证
 function checkPassword3($NickName,$PassWord3){
-	$sql="select * from `Member` where nickname='".$NickName."' AND password3='".$PassWord3."'";
+	$sql="select * from `member` where nickname='".$NickName."' AND password3='".$PassWord3."'";
 	$query=mysql_query($sql);
 	if(mysql_num_rows($query) >= 1){
 		return true;
@@ -172,7 +174,7 @@ function checkPassword3($NickName,$PassWord3){
 }
 //密码问题验证
 function checkQuestion($NickName,$passanswer){
-	$sql="select * from `Member` where nickname='".$NickName."' AND passanswer='".$passanswer."'";
+	$sql="select * from `member` where nickname='".$NickName."' AND passanswer='".$passanswer."'";
 	$query=mysql_query($sql);
 	if(mysql_num_rows($query) >= 1){
 		return true;
@@ -181,13 +183,13 @@ function checkQuestion($NickName,$passanswer){
 	}
 }
 //根据ID获取会员信息
-function getMemberbyID($_id){
+function getmemberbyID($_id){
 	$sql = "SELECT * FROM `member` WHERE id=".$_id;
 	$query=mysql_query($sql);
 	return mysql_fetch_array($query);
 }
 //根据昵称获取会员信息
-function getMemberbyNickName($NickName){
+function getmemberbyNickName($NickName){
 	$sql = "SELECT * FROM `member` where nickname='".$NickName."'";
 	$query=mysql_query($sql);
 	return mysql_fetch_array($query);
@@ -213,7 +215,7 @@ function getFatherManbyFidAndTreeplace($FatherID,$TreePlace){
 }
 
 //查询该编号推荐的人的集合
-function getMemberListByreid($reid){
+function getmemberListByreid($reid){
 	$sql = "SELECT * FROM `member` WHERE reid=".$reid."";
 	$query = mysql_query($sql);
 	return mysql_fetch_array($query);
@@ -222,14 +224,14 @@ function getMemberListByreid($reid){
 *return true在团队中,false不在
 */
 function checkisppath($id,$uid){
-	$re=getMemberbyID($uid);
+	$re=getmemberbyID($uid);
 	return preg_match(",".$id.",",$re['ppath']);
 }
 /*判断id的团队中是否有nickname
 *return true在团队中,false不在
 */
 function checkisrepath($id,$nickname){
-	$re=getMemberbyNickName($nickname);
+	$re=getmemberbyNickName($nickname);
 	return preg_match(",".$id.",",$re['repath']);
 }
 
