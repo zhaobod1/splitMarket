@@ -4,7 +4,6 @@ include_once("../class/ulevel_class.php");
 include_once("../class/system_class.php");
 include_once("../class/email_class.php");
 session_start();
-header("Content-Type: text/html;charset=utf-8");
 if($_POST['submit']){
 	$bdName=$_POST['bdName'];//服务器中心编号
 	$rName=$_POST['rName'];//推荐人编号
@@ -49,6 +48,9 @@ if($_POST['submit']){
 	$xian=$_POST['city2'];
 	
 	$zhuce=true;
+
+
+
 	if(checkUserID($UserID) == true)
 	{
 		$zhuce=false;
@@ -158,6 +160,7 @@ if($_POST['submit']){
 			die;
 
 		}
+
 		add_insert_cl('member',$member);
 		$_email=new email_class();
 		$email=$_email->getemail();

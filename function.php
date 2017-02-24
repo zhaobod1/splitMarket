@@ -1,6 +1,6 @@
 <?php
 include("conn.php");
-
+include_once "include/initMysql.php";
 function dd($arr,$useDie=true) {
 	var_dump($arr);
 	if ($useDie) {
@@ -281,13 +281,36 @@ function add_insert_cl($table,$err){
 		$sql .= $key.", ";     
 	}      
 	$sql = substr($sql, 0, strlen($sql)-2) .  ") VALUES (";    
-	foreach ( $err as $key => $value  ){    
+	foreach ( $err as $key => $value  ){
+		//$value = fixEncoding($value);
+		//echo $value,":",mb_detect_encoding($value),"<br/>";
 		$sql .= "'".$value."', ";     
 	}      
-	$sql = substr($sql, 0, strlen($sql)-2) .  ")";           
-	@mysql_query($sql) or die (mysql_error());    
+	$sql = substr($sql, 0, strlen($sql)-2) .  ")";
+	global $ecs_db;
+	$res = $ecs_db->query($sql);
+	if (!$res) {
+		die (mysql_error());
+	}
+	//@mysql_query($sql) or die (mysql_error());
 }
+// Fixes the encoding to uf8
 
+function fixEncoding($in_str)
+
+{
+
+	$cur_encoding = mb_detect_encoding($in_str) ;
+
+	if($cur_encoding == "UTF-8" && mb_check_encoding($in_str,"UTF-8"))
+
+		return $in_str;
+
+	else
+
+		return utf8_encode($in_str);
+
+}
 /*
 *修改实例
 *$table=表名
