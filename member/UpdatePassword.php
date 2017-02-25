@@ -15,6 +15,7 @@ if ($_SESSION['language']==1){
 }else{
 	include_once("../language/en.php");
 }
+$pass = array();
 if ($_POST['submit']){
 	$us=getMemberbyID($_SESSION['ID']);
 	if ($_GET['pass'] == 1){
@@ -36,7 +37,9 @@ if ($_POST['submit']){
 			echo "<script language=javascript>alert('密码错误,请确认后重新输入.');window.location.href='?'</script>";	
 		}
 	}
-	echo edit_update_cl('member',$pass,$_SESSION['ID']);
+
+	//echo edit_update_cl('member',$pass,$_SESSION['ID']);
+    h15_update_member('member',$pass, $_SESSION['ID']);
 	echo "<script language=javascript>alert('修改成功.');window.location.href='?'</script>";
 }
 ?>

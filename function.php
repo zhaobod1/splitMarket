@@ -311,22 +311,47 @@ function fixEncoding($in_str)
 		return utf8_encode($in_str);
 
 }
+
+function h15_update_member($table, $arr, $id) {
+
+	$sql = "UPDATE ".$table." SET ";
+	if (is_array($arr)) {
+		foreach ($arr as $key => $value) {
+			if (preg_match("/[0-9a-zA-Z]+/", $value)) {
+				$sql .= $key."='".$value."', ";
+			} else {
+				echo "<script language=javascript>alert('密码只能包含数字和字母.');window.location.href='?'</script>";
+			}
+		}
+		$sql = substr($sql, 0, strlen($sql)-2) .  " WHERE id=".$id;
+		global $ecs_db;
+		$res = $ecs_db->query($sql);
+		if (!$res) {
+			echo "<script language=javascript>alert('请从新输入密码." . $ecs_db->error() . "');window.location.href='?'</script>";
+		}
+
+	} else {
+		echo "<script language=javascript>alert('请从新输入密码.(is not array.)');window.location.href='?'</script>";
+
+	}
+}
 /*
 *修改实例
 *$table=表名
 *$err=数组
 *$id=编号
 */
-function edit_update_cl($table,$err,$id){     
-	$sql = "UPDATE ".$table." SET ";    
+function edit_update_cl($table,$err,$id){
+	$sql = "UPDATE ".$table." SET ";
 	foreach ( $err as $key => $value  ){
-		if(preg_match("/^\d*$/",$key)){
+		if(preg_match("/^[\d]*$/",$key)){
 			#过滤数字
 		}else{
 			$sql .= $key."='".$value."', ";	
 		}
 	}      
 	$sql = substr($sql, 0, strlen($sql)-2) .  " WHERE id=".$id;
+
 	@mysql_query($sql) or die (mysql_error());
 }
 

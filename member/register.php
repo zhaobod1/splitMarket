@@ -217,13 +217,13 @@ if ($_SESSION['language']==1){
                     document.getElementById('UserNamelabel').innerText="";
                 }
             }
-            if(formName=="UserTel"){
+           /* if(formName=="UserTel"){
                 if(UserTel.length == 0){
                     document.getElementById('UserTellabel').innerText="请输入联系电话";
                 }else{
                     document.getElementById('UserTellabel').innerText="";
                 }
-            }
+            }*/
             if(formName=="UserAddress"){
                 if(UserAddress.length == 0){
                     document.getElementById('UserAddresslabel').innerText="请输入联系地址";
@@ -403,11 +403,11 @@ if ($_SESSION['language']==1){
                 document.form1.UserName.focus();
                 return false;
             }
-            if(UserTel.length == 0){
+            /*if(UserTel.length == 0){
                 alert("温馨提示:\n请输入联系电话.");
                 document.form1.UserTel.focus();
                 return false;
-            }
+            }*/
             if(UserAddress.length == 0){
                 alert("温馨提示:\n请输入联系地址.");
                 document.form1.UserAddress.focus();
