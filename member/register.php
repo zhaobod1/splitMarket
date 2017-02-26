@@ -231,7 +231,7 @@ if ($_SESSION['language']==1){
                     document.getElementById('UserAddresslabel').innerText="";
                 }
             }
-            if(formName=="BankCard"){
+            /*if(formName=="BankCard"){
                 if(BankCard.length == 0){
                     document.getElementById('BankCardlabel').innerText="请输入开户帐号";
                 }else{
@@ -259,6 +259,7 @@ if ($_SESSION['language']==1){
                     document.getElementById('useremaillabel').innerText="";
                 }
             }
+             */
         }
 
         function CheckForm(){
@@ -283,6 +284,11 @@ if ($_SESSION['language']==1){
             BankUserName=document.form1.BankUserName.value;
             BankAddress=document.form1.BankAddress.value;
             useremail=document.form1.useremail.value;
+            UserQQ = document.form1.UserQQ.value;
+            zhifubao = document.form1.zhifubao.value;
+            caifutong = document.form1.caifutong.value;
+
+
             if(bdName.length == 0){
                 alert("温馨提示:\n请输入服务中心编号.");
                 document.form1.bdName.focus();
@@ -393,27 +399,38 @@ if ($_SESSION['language']==1){
                 document.form1.passAnswer.focus();
                 return false;
             }
+          if(UserName.length == 0){
+            alert("温馨提示:\n请输入会员姓名.");
+            document.form1.UserName.focus();
+            return false;
+          }
             if(UserCard.length == 0){
                 alert("温馨提示:\n请输入身份证号码.");
                 document.form1.UserCard.focus();
                 return false;
             }
-            if(UserName.length == 0){
-                alert("温馨提示:\n请输入会员姓名.");
-                document.form1.UserName.focus();
-                return false;
-            }
-            /*if(UserTel.length == 0){
+
+            if(UserTel.length == 0){
                 alert("温馨提示:\n请输入联系电话.");
                 document.form1.UserTel.focus();
                 return false;
-            }*/
+            }
+          if(UserQQ.length < 4){
+            alert("温馨提示:\n请输入QQ号.");
+            document.form1.UserQQ.focus();
+            return false;
+          }
+          if (caifutong.length==0 && zhifubao.length == 0 && BankCard.length == 0) {
+            alert("温馨提示:\n至少提供一种支付方式.");
+            document.form1.zhifubao.focus();
+            return false;
+          }
             if(UserAddress.length == 0){
                 alert("温馨提示:\n请输入联系地址.");
                 document.form1.UserAddress.focus();
                 return false;
             }
-            if(BankCard.length == 0){
+            /*if(BankCard.length == 0){
                 alert("温馨提示:\n请输入开户帐号.");
                 document.form1.BankCard.focus();
                 return false;
@@ -433,6 +450,7 @@ if ($_SESSION['language']==1){
                 document.form1.useremail.focus();
                 return false;
             }
+             */
             if(classification.value == 0){
                 alert("温馨提示:\n请选择所在省份.");
                 return false;
@@ -482,7 +500,7 @@ $sys=$_system->system_information(1);
             <td align="right"><?=$register5?>
                 ：</td>
             <td align="left">
-                <input name="FatherName" type="text" id="FatherName"  value="<?=$_GET['nickname']?>" maxlength="15"/>
+                <input name="FatherName" placeholder="必填，您的推荐人" type="text" id="FatherName"  value="<?=$_GET['nickname']?>" maxlength="15"/>
                 &nbsp;(*)&nbsp;<label id="FatherNamelabel"/>
                 <input name="button3" type="button" class="button_blue" id="button3" onclick='checknickname(3);' value="<?=$anniu6?>">
             </td>
@@ -563,21 +581,13 @@ $sys=$_system->system_information(1);
         <tr>
             <td align="right"><?=$register14?>
                 ：</td>
-            <td align="left"><input name="UserName" type="text" id="UserName" onBlur="Check('UserName');" value="china" maxlength="10"/>
+            <td align="left"><input name="UserName" type="text" id="UserName" onBlur="Check('UserName');" value="" placeholder="请输入真实的姓名" maxlength="10"/>
                 &nbsp;(*)&nbsp;<label id="UserNamelabel"/></td>
         </tr>
-        <tr>
-            <td align="right">
-                电话号码：
-            </td>
-            <td align="left">
-                <input type="text" name="UserTel" id="UserTel" onblur="Check('UserTel');" maxlength="11" />
-                (*)<label for="UserTel" id="UserTellabel"></label>
-            </td>
-        </tr>
-        <tr style="display:none">
+
+        <tr >
             <td align="right">身份证号码：</td>
-            <td align="left"><input name="UserCard" type="text" id="UserCard"  onblur="Check('UserCard');" value="123" maxlength="20" onKeyUp="showBirthday(this)" />
+            <td align="left"><input name="UserCard" type="text" id="UserCard" placeholder="请正确输入"  onblur="Check('UserCard');" value="" maxlength="20" onKeyUp="showBirthday(this)" />
                 &nbsp;(*)&nbsp;<label id="UserCardlabel"/></td>
         </tr>
         <tr>
@@ -639,9 +649,9 @@ $sys=$_system->system_information(1);
             <td align="left"><input name="UserAddress" type="text" id="UserAddress" onBlur="Check('UserAddress');" value="china" maxlength="50"/>
                 &nbsp;(*)&nbsp;<label id="UserAddresslabel"/></td>
         </tr>
-        <tr style="display:none">
+        <tr >
             <td align="right">联系电话：</td>
-            <td align="left"><input name="UserTel" type="text" id="UserTel" onBlur="Check('UserTel');" value="12346578901" maxlength="20"/>
+            <td align="left"><input name="UserTel" placeholder="输入11位电话号码" type="text" id="UserTel" onBlur="Check('UserTel');" value="" maxlength="20"/>
                 &nbsp;(*)&nbsp;<label id="UserTellabel"/></td>
         </tr>
         <tr style="display:none">
@@ -650,44 +660,44 @@ $sys=$_system->system_information(1);
                 &nbsp;(*)&nbsp;
                 <label id="useremaillabel"/></td>
         </tr>
-        <tr style="display:none">
+        <tr>
             <td align="right">QQ号码：</td>
-            <td align="left"><input name="UserQQ" type="text" id="UserQQ"  value="china" maxlength="12"/></td>
+            <td align="left"><input name="UserQQ" type="text" id="UserQQ" placeholder="请正确输入"  value="" maxlength="12"/></td>
         </tr>
-        <tr style="display:none">
-            <td colspan="2" align="center">银行账户资料</td>
+        <tr >
+            <td colspan="2" align="center">支付方式</td>
         </tr>
-        <tr style="display:none">
+        <tr style="display: none;">
             <td align="right">开户帐号：</td>
             <td align="left">
                 <select name="bankname" id="bankname">
-                    <option value="农业银行">农业银行</option>
-                    <!--<option value="支付宝">支付宝</option>
-                    <option value="财付通">财付通</option>-->
+                    <option value="银行卡">银行卡</option>
+                    <option value="支付宝">支付宝</option>
+                    <option value="微信支付">微信支付</option>
                 </select></td>
         </tr>
-        <tr style="display:none">
-            <td align="right">开户帐号：</td>
-            <td align="left"><input name="BankCard" type="text" id="BankCard" onBlur="Check('BankCard');" value="china" maxlength="20"/>
-                &nbsp;(*)&nbsp;<label id="BankCardlabel"/></td>
+        <tr>
+            <td align="right">银行卡号：</td>
+            <td align="left"><input name="BankCard" placeholder="输入卡号，可以留空" type="text" id="BankCard" onBlur="Check('BankCard');" value="" maxlength="20"/>
+                &nbsp;&nbsp;<label id="BankCardlabel"/></td>
         </tr>
-        <tr style="display:none">
+        <tr >
             <td align="right">开户姓名：</td>
-            <td align="left"><input name="BankUserName" type="text" id="BankUserName" onBlur="Check('BankUserName');" value="china" maxlength="20"/>
-                &nbsp;(*)&nbsp;<label id="BankUserNamelabel"/></td>
+            <td align="left"><input name="BankUserName" placeholder="可以留空" type="text" id="BankUserName" onBlur="Check('BankUserName');" value="" maxlength="20"/>
+                &nbsp;&nbsp;<label id="BankUserNamelabel"/></td>
         </tr>
-        <tr style="display:none">
+        <tr >
             <td align="right">开户地址：</td>
-            <td align="left"><input name="BankAddress" type="text" id="BankAddress" onBlur="Check('BankAddress');" value="china" maxlength="50"/>
-                &nbsp;(*)&nbsp;<label id="BankAddresslabel"/></td>
+            <td align="left"><input name="BankAddress" placeholder="可以留空" type="text" id="BankAddress" onBlur="Check('BankAddress');" value="" maxlength="50"/>
+                &nbsp;&nbsp;<label id="BankAddresslabel"/></td>
         </tr>
-        <tr style="display:none">
+        <tr >
             <td align="right">支付宝账号：</td>
-            <td align="left"><input name="zhifubao" type="text" id="zhifubao" value="china" maxlength="50"/></td>
+            <td align="left"><input name="zhifubao" placeholder="可以留空" type="text" id="zhifubao" value="" maxlength="50"/></td>
         </tr>
-        <tr style="display:none">
-            <td align="right">财付通帐号：</td>
-            <td align="left"><input name="caifutong" type="text" id="caifutong"  value="china" maxlength="50"/></td>
+        <tr >
+            <td align="right">微信支付号：</td>
+            <td align="left"><input name="caifutong" placeholder="可以留空" type="text" id="caifutong"  value="" maxlength="50"/></td>
         </tr>
         <tr>
             <td align="right"><?=$register19?>

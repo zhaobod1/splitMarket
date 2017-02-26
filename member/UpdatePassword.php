@@ -21,6 +21,18 @@ if ($_POST['submit']){
 	if ($_GET['pass'] == 1){
 		if ($_POST['password1'] == $us['password1']){
 			$pass['password1']=	$_POST['npassword1'];
+			//同步修改密码  huo15.com
+			error_reporting(E_ALL);
+			include_once "../include/config.inc.php";
+			include_once   "../uc_client/client.php";
+			include_once "../include/initMysql.php";
+			global $ecs_db;
+			$sql = "select userid from `member` WHERE id=".$_SESSION['ID'];
+			$username = $ecs_db->getOne($sql);
+            $res = uc_user_edit($username,$us['password1'],$pass['password1'],"");
+
+			writeLog("***********主站 UpdatePassword.php 更新密码 **********");
+
 		}else{
 			echo "<script language=javascript>alert('密码错误,请确认后重新输入.');window.location.href='?'</script>";		
 		}
@@ -39,8 +51,14 @@ if ($_POST['submit']){
 	}
 
 	//echo edit_update_cl('member',$pass,$_SESSION['ID']);
-    h15_update_member('member',$pass, $_SESSION['ID']);
-	echo "<script language=javascript>alert('修改成功.');window.location.href='?'</script>";
+    if ($res) {
+	    h15_update_member('member',$pass, $_SESSION['ID']);
+	    echo "<script language=javascript>alert('修改成功.');window.location.href='?'</script>";
+
+    } else {
+	    echo "<script language=javascript>alert('同步密码出现问题，请重试.');window.location.href='?'</script>";
+
+    }
 }
 ?>
 <script language="javascript">

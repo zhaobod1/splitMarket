@@ -50,6 +50,84 @@ if($_POST['submit']){
 	$zhuce=true;
 
 
+	/*
+	array(36) {
+      ["bdName"]=>
+      string(5) "admin"
+      ["rName"]=>
+      string(5) "admin"
+      ["FatherName"]=>
+      string(7) "CN92893"
+      ["TreePlace"]=>
+      string(1) "2"
+      ["password1"]=>
+      string(6) "111111"
+      ["password12"]=>
+      string(6) "111111"
+      ["password2"]=>
+      string(6) "222222"
+      ["password22"]=>
+      string(6) "222222"
+      ["password3"]=>
+      string(6) "333333"
+      ["password32"]=>
+      string(6) "333333"
+      ["passQuestion"]=>
+      string(5) "china"
+      ["passAnswer"]=>
+      string(5) "china"
+      ["UserID"]=>
+      string(7) "CN84464"
+      ["NickName"]=>
+      string(7) "CN84464"
+      ["UserName"]=>
+      string(5) "china"
+      ["UserCard"]=>
+      string(3) "123"
+      ["sex"]=>
+      string(1) "1"
+      ["nian"]=>
+      string(4) "1960"
+      ["yue"]=>
+      string(1) "1"
+      ["ri"]=>
+      string(1) "1"
+      ["xueli"]=>
+      string(6) "小学"
+      ["province"]=>
+      string(9) "请选择"
+      ["city1"]=>
+      string(9) "请选择"
+      ["city2"]=>
+      string(9) "请选择"
+      ["UserAddress"]=>
+      string(5) "china"
+      ["UserTel"]=>
+      string(9) "123456789"
+      ["useremail"]=>
+      string(5) "china"
+      ["UserQQ"]=>
+      string(5) "china"
+      ["bankname"]=>
+      string(9) "银行卡"
+      ["BankCard"]=>
+      string(3) "123"
+      ["BankUserName"]=>
+      string(6) "张三"
+      ["BankAddress"]=>
+      string(6) "青岛"
+      ["zhifubao"]=>
+      string(6) "123456"
+      ["caifutong"]=>
+      string(7) "1234567"
+      ["uLevel"]=>
+      string(1) "1"
+      ["submit"]=>
+      string(6) "提交"
+    }
+
+
+	*/
 
 	if(checkUserID($UserID) == true)
 	{
