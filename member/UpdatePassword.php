@@ -52,9 +52,14 @@ if ($_POST['submit']){
 
 	//echo edit_update_cl('member',$pass,$_SESSION['ID']);
     if ($res) {
-	    h15_update_member('member',$pass, $_SESSION['ID']);
-	    echo "<script language=javascript>alert('修改成功.');window.location.href='?'</script>";
+	    $r = h15_update_member('member',$pass, $_SESSION['ID']);
+	    if ($r) {
+		    echo "<script language=javascript>alert('修改成功.');window.location.href='?'</script>";
 
+	    } else {
+		    echo "<script language=javascript>alert('修改密码出现问题，写入数据库错误，请重试.');window.location.href='?'</script>";
+
+	    }
     } else {
 	    echo "<script language=javascript>alert('同步密码出现问题，请重试.');window.location.href='?'</script>";
 

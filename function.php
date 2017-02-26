@@ -328,6 +328,8 @@ function h15_update_member($table, $arr, $id) {
 		$res = $ecs_db->query($sql);
 		if (!$res) {
 			echo "<script language=javascript>alert('请从新输入密码." . $ecs_db->error() . "');window.location.href='?'</script>";
+		} else {
+			return true;
 		}
 
 	} else {

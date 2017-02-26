@@ -14,6 +14,7 @@ body,td,th {
 </style>
 </head>
 <?php
+error_reporting(0);
 include("admin_check.php");
 include_once("../function.php");
 header("Content-Type: text/html;charset=utf-8");
