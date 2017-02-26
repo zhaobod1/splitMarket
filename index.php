@@ -605,12 +605,12 @@ if (@$_POST['loginnow'] == "loginnow") {
 			</div>
 			<INPUT type=hidden value=loginnow name=loginnow>
 
-			<input type="text" name="NickName" id="NickName" value="" required="required">
+			<input type="text" name="NickName" placeholder="会员编号/手机号" id="NickName" value="" required="required">
 
-			<input type="password" name="password" id="password" required="required">
+			<input type="password" name="password" id="password" placeholder="密码" required="required">
 
 			<div>
-				<input style="width:225px;" name="code" id="code" type="text" >
+				<input style="width:225px;" name="code" id="code" type="text" placeholder="验证码">
 				<img id="code" src="code.php" style="cursor: pointer; vertical-align:middle;"  onClick="this.src='code.php?rndcode=' +Math.random();"/>
 			</div>
 
