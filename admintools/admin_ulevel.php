@@ -112,11 +112,11 @@ if($_POST['button']){
           <td style="display:none" align="center">单数</td>
           <td width="30" align="center">推荐奖(%)</td>
           <td width="30" align="center">对碰奖(%)</td>
-          <td width="40" align="center">一层见点奖(%)</td>
-          <td width="40"  align="center">二层见点奖(%)</td>
-          <td width="40"  align="center">三层见点奖(%)</td>
-          <td width="40" align="center">四层见点奖(%)</td>
-          <td width="40" align="center">五层见点奖(%)</td>
+          <td width="40" align="center">一层管理奖(%)</td>
+          <td width="40"  align="center">二层管理奖(%)</td>
+          <td width="40"  align="center">三层管理奖(%)</td>
+          <td width="40" align="center">四层管理奖(%)</td>
+          <td width="40" align="center">五层管理奖(%)</td>
         </tr>
         <?php
       	$sql = "SELECT * FROM `ulevel` order by ulevel";

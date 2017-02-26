@@ -251,7 +251,7 @@ function CheckForm(){
       <input type="text" name="UserName" id="UserName" value="<?=$UserName?>">
     </td>
   </tr>
-  <tr  style="display:none">
+  <tr >
     <td width="30%" align="right">身份证号码：</td>
     <td width="70%" align="left">
       <input type="text" name="UserCard" id="UserCard" value="<?=$UserCard?>">
@@ -316,7 +316,7 @@ function CheckForm(){
     <td align="left">
 <input name="UserAddress" type="text" id="UserAddress" value="<?=$UserAddress?>" size="30" maxlength="100"></td>
   </tr>
-  <tr style="display:none">
+  <tr>
     <td align="right">联系电话：</td>
     <td align="left"><input type="text" name="UserTel" id="UserTel" value="<?=$UserTel?>"></td>
   </tr>
@@ -324,40 +324,42 @@ function CheckForm(){
     <td align="right">电子邮件：</td>
     <td align="left"><input name="useremail" type="text" id="useremail" value="<?=$useremail?>" size="30" maxlength="50"></td>
   </tr>
-  <tr style="display:none">
+  <tr >
     <td align="right">QQ号码：</td>
     <td align="left"><input type="text" name="UserQQ" id="UserQQ" value="<?=$UserQQ?>"></td>
   </tr>
-  <tr style="display:none">
+  <tr >
     <td colspan="2" align="center">银行账户资料</td>
     </tr>
- <tr style="display:none">
+ <tr>
     <td align="right">开户银行：</td>
     <td align="left">
       <select name="BankName" id="BankName">
       	<option value="农业银行">农业银行</option>
-        <option value="支付宝">支付宝</option>
-        <option value="财付通">财付通</option>
-      </select></td>
+        <option value="建设银行">建设银行</option>
+        <option value="工商银行">工商银行</option>
+        <option value="中国银行">中国银行</option>
+      </select>
+    </td>
   </tr>
-  <tr style="display:none">
+  <tr >
     <td align="right">开户帐号：</td>
     <td align="left"><input type="text" name="BankCard" id="BankCard" value="<?=$BankCard?>"></td>
   </tr>
-  <tr style="display:none">
+  <tr">
     <td align="right">开户姓名：</td>
     <td align="left"><input type="text" name="BankUserName" id="BankUserName" value="<?=$BankUserName?>"></td>
   </tr>
-  <tr style="display:none">
+  <tr >
     <td align="right">开户地址：</td>
     <td align="left"><input type="text" name="BankAddress" id="BankAddress" value="<?=$BankAddress?>"></td>
   </tr>
-  <tr style="display:none">
+  <tr >
     <td align="right">支付宝账号：</td>
     <td align="left"><input type="text" name="zhifubao" id="zhifubao" value="<?=$zhifubao?>"></td>
   </tr>
-  <tr style="display:none">
-    <td align="right">财付通帐号：</td>
+  <tr >
+    <td align="right">微信支付号：</td>
     <td align="left"><input type="text" name="caifutong" id="caifutong" value="<?=$caifutong?>"></td>
   </tr>
   <tr>

@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 session_start();
 if ($_SESSION['to_admin'] == null){
 	echo "<script language=javascript>alert('您尚未登录,请您重新登录.');top.location='index.php'</script>";	

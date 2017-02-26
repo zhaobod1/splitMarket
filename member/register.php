@@ -98,7 +98,7 @@ if ($_SESSION['language']==1){
             }
             if(formName=="FatherName"){
                 if(FatherName.length == 0){
-                    document.getElementById('FatherNamelabel').innerText="请输入接点人编号";
+                    document.getElementById('FatherNamelabel').innerText="请输入领导人编号";
                 }else{
                     document.getElementById('FatherNamelabel').innerText="";
                 }
@@ -300,7 +300,7 @@ if ($_SESSION['language']==1){
                 return false;
             }
             if(FatherName.length == 0){
-                alert("温馨提示:\n请输入接点人编号.");
+                alert("温馨提示:\n请输入领导人编号.");
                 document.form1.FatherName.focus();
                 return false;
             }
@@ -667,14 +667,16 @@ $sys=$_system->system_information(1);
         <tr >
             <td colspan="2" align="center">支付方式</td>
         </tr>
-        <tr style="display: none;">
+        <tr ">
             <td align="right">开户帐号：</td>
             <td align="left">
-                <select name="bankname" id="bankname">
-                    <option value="银行卡">银行卡</option>
-                    <option value="支付宝">支付宝</option>
-                    <option value="微信支付">微信支付</option>
-                </select></td>
+                <select name="BankName" id="BankName">
+                    <option value="农业银行">农业银行</option>
+                    <option value="建设银行">建设银行</option>
+                    <option value="工商银行">工商银行</option>
+                    <option value="中国银行">中国银行</option>
+                </select>
+            </td>
         </tr>
         <tr>
             <td align="right">银行卡号：</td>
@@ -706,14 +708,15 @@ $sys=$_system->system_information(1);
                 <select name="uLevel" id="uLevel">
                     <?php
                     $_ulevel=new ulevel_class();
-                    for($i=1;$i<=4;$i++){
+                    for($i=1;$i<=5;$i++){
                         $ul=$_ulevel->getulevelbyulevel($i);
                         ?>
                         <option value="<?=$i?>">[$<?=$ul['lsk']?>]</option>
                         <?php
                     }
                     ?>
-                </select></td>
+                </select>
+            </td>
         </tr>
         <tr>
             <td colspan="2" align="center">&nbsp;</td>

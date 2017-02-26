@@ -140,6 +140,11 @@ function CheckForm(){
       ：</td>
     <td width="54%" align="left">
       <select name="txlx" id="txlx">
+
+              <option value="1">银行卡</option>
+              <option value="2">支付宝</option>
+              <option value="3">微信支付</option>
+
         <option value="1">农业银行</option>
         <!--<option value="2">支付宝</option>
         <option value="3">财付通</option>-->
