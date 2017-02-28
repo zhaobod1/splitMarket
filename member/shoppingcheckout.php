@@ -143,14 +143,14 @@ if ($_POST['goback']){
         本次消费：<br>
         首购币￥<?=$j_sgb?><input name="sgb" type="hidden" value="<?=$j_sgb?>">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        电子币￥<?=$j_gwb?>
+        激活币￥<?=$j_gwb?>
         <input name="gwb" type="hidden" value="<?=$j_gwb?>">
         <br>
         <br>
         货币余额：<br>
         剩余首购币￥<?=$u_sgb?>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		剩余电子币￥<?=$u_zsq?>
+		剩余激活币￥<?=$u_zsq?>
 		<br>
 		<?php
         	if($u_zsq<$j_gwb || $u_sgb<$j_sgb){ 

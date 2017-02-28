@@ -179,7 +179,7 @@ function exportExcel(DivID){
         <td align="center"><?=$row['username']?></td>
         <td align="center"><?=$row['jine']?></td>
         <td align="center"><?=$row['cdate']?></td>
-        <td align="center"><?php if ($row['lx']==0){?>电子币<?php }elseif($row['lx']==1){?>游戏币<?php }?></td>
+        <td align="center"><?php if ($row['lx']==0){?>激活币币<?php }elseif($row['lx']==1){?>游戏币<?php }?></td>
         <td align="center"><?php if ($row['isgrant']==1){?>已发放<?php }else{?> <font color="#FF0000">未发放</font><?php }?></td>
       </tr>
       <?php

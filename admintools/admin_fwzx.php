@@ -116,10 +116,10 @@ if($_POST['button2']){
         <td style="display:none" align="center">级别</td>
         <td align="center">负责地区</td>
         <td style="display:none" align="center">备注</td>
-        <td align="center">奖金/电子币</td>
+        <td align="center">奖金/激活币</td>
         <td align="center">增减奖金</td>
         <td style="display:none" align="center">增减购物币</td>
-        <td align="center">增减电子币</td>
+        <td align="center">增减激活币</td>
         <td align="center">操作</td>
     </tr>
        <?php

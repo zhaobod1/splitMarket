@@ -34,7 +34,7 @@ if ($_POST['submit']){
 						edit_update_cl('member',$us_update,$us['id']);
 						echo "<script language=javascript>alert('申请完成,请耐心等待管理员审核.');window.location.href='?'</script>";	
 					}else{
-						echo "<script language=javascript>alert('您的电子币余额不足.');window.location.href='?'</script>";	
+						echo "<script language=javascript>alert('您的激活币余额不足.');window.location.href='?'</script>";	
 					}
 			}
 			
@@ -68,7 +68,7 @@ function checknickname(lx)
 <form name="form1" method="post" action="?" onSubmit="return CheckForm();">
 <table  width="100%" cellpadding="3" cellspacing="1" border="0" align="center" class="table1">
 	<tr>
-  <td align="right">电子币余额:</td>
+  <td align="right">激活币余额:</td>
   <td><?=$us['zsq']?></td>
   </tr>
   <tr>

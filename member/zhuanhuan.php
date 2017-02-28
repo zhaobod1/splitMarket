@@ -104,8 +104,8 @@ function CheckForm(){
       <select name="lx" id="lx">
         <option value="0"><?=$zhuanhuan12?></option>
        <!--<option value="1">奖金转游戏币</option>
-        <option value="2">游戏币转电子币</option>-->
-       <!-- <option value="3">购物币转电子币</option>-->
+        <option value="2">游戏币转激活币</option>-->
+       <!-- <option value="3">购物币转激活币</option>-->
       </select></td>
   </tr>
   <tr>
@@ -164,7 +164,7 @@ function CheckForm(){
         <td align="center"><?=$row['nickname']?></td>
         <td align="center"><?=$row['username']?></td>
         <td align="center"><?=$row['jine']?></td>
-        <td align="center"><?php if ($row['lx']==0){?><?=$zhuanhuan12?><?php }elseif($row['lx']==1){?>奖金转购物币<?php }elseif($row['lx']==2){?>游戏币转电子币<?php }elseif($row['lx']==3){?>购物币转电子币<?php }?></td>
+        <td align="center"><?php if ($row['lx']==0){?><?=$zhuanhuan12?><?php }elseif($row['lx']==1){?>奖金转商城币<?php }elseif($row['lx']==2){?>游戏币转激活币<?php }elseif($row['lx']==3){?>购物币转激活币<?php }?></td>
         <td align="center"><?=$row['zdate']?></td>
 		
       </tr>

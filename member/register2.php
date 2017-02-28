@@ -190,6 +190,14 @@ if($_POST['submit']){
 		$member['username']=$UserName;
 		$member['usercard']=$UserCard;
 		$member['usertel']=$UserTel;
+		require_once "../include/initMysql.php";
+		global $ecs_db;
+		$sql = "select COUNT(*) from member WHERE usertel='" . $member["usertel"] . "'";
+		$countMobile = $ecs_db->getOne($sql);
+		if ($countMobile) {
+			echo "<script language=javascript>alert('手机号码已经存在！请换一个手机号码注册.');</script>";
+			die;
+        }
 		$member['useraddress']=$UserAddress;
 		$member['userqq']=$UserQQ;
 		$member['bankname']=$BankName;

@@ -139,7 +139,7 @@ function exportExcel(DivID){
         <td align="center" >会员编号</td>
         <td align="center" >会员姓名</td>
         <td align="center" >奖金</td>
-        <td align="center">电子币</td>
+        <td align="center">激活币</td>
         <td align="center">调整时间</td>
         </tr>
       <?php

@@ -409,7 +409,7 @@ a:active {
     <td align="left"><font color="#df802e"><?=$us['mey']?></font></td>
   </tr>
   <tr>
-    <td align="left"><font color="#df802e">电子币：</font></td>
+    <td align="left"><font color="#df802e">激活币：</font></td>
     <td align="left"><font color="#df802e"><?=$us['zsq']?></font></td>
   </tr>
   <tr>

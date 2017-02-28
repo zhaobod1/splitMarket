@@ -27,7 +27,7 @@ if ($_POST['Search']){
 		if ($SearchType==1){
 			$_SESSION['Search']=NULL;
 		}elseif($SearchType==2){
-			#搜索电子币
+			#搜索激活币
 			$_SESSION['Search']="and lx=0";
 		}elseif($SearchType==3){
 			#搜索购物币
@@ -96,7 +96,7 @@ var oXL = new ActiveXObject("Excel.Application");
         <td height="4"  align="left">
           <select name="SearchType" id="SearchType">
             <option value="1">会员编号</option>
-            <option value="2">电子币</option>
+            <option value="2">激活币</option>
             <option value="3">购物币</option>
             <option value="4">奖金</option>
           </select>
@@ -162,7 +162,7 @@ var oXL = new ActiveXObject("Excel.Application");
         <td align="center"><?=$row['susername']?></td>
         <td align="center"><?=$row['jine']?></td>
         
-        <td align="center"><?php if ($row['lx']==0){?>电子币<?php }elseif($row['lx']==1){?>游戏币<?php }elseif($row['lx']==2){?>奖金<?php }?></td>
+        <td align="center"><?php if ($row['lx']==0){?>激活币<?php }elseif($row['lx']==1){?>游戏币<?php }elseif($row['lx']==2){?>奖金<?php }?></td>
         <td align="center"><?=$row['zdate']?></td>
       </tr>
       <?php

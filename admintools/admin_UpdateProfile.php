@@ -332,7 +332,7 @@ function CheckForm(){
     <td width="59%" align="left"><?=$mey?><input name="mey" type="text" value="0"></td>
   </tr>
   <tr>
-    <td width="41%" align="right">增减电子币：</td>
+    <td width="41%" align="right">增减激活币：</td>
     <td width="59%" align="left"><?=$zsq?><input name="zsq" type="text" value="0"></td>
   </tr>
   <tr>

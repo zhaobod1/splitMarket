@@ -104,7 +104,7 @@ if($_POST['button3']){
 
 
 						}else{
-							echo "<script language=javascript>alert('您的电子币余额不足,激活失败.');window.location.href='?'</script>";
+							echo "<script language=javascript>alert('您的激活币币余额不足,激活失败.');window.location.href='?'</script>";
 						}
 					}
 				//}else{

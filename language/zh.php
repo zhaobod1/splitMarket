@@ -87,8 +87,8 @@ $personal1="个人资料";
 $personal2="服务中心编号";
 $personal3="推荐人编号";
 $personal4="推荐人姓名";
-$personal5="接点人编号";
-$personal6="接点人姓名";
+$personal5="管理人编号";
+$personal6="管理人姓名";
 $personal7="会员编号";
 $personal8="会员姓名";
 $personal9="注册时间";
@@ -125,7 +125,7 @@ $register1="会员注册";
 $register2="*为必填项目";
 $register3="服务中心编号";
 $register4="推荐人编号";
-$register5="接点人编号";
+$register5="管理人编号";
 $register6="安置区域";
 $register7="密码";
 $register8="一级密码";
@@ -152,7 +152,7 @@ $teaminformation1="会员编号";
 $teaminformation2="会员姓名";
 $teaminformation3="会员资格";
 $teaminformation4="推荐人";
-$teaminformation5="接点人";
+$teaminformation5="管理人";
 $teaminformation6="联系电话";
 $teaminformation7="QQ号码";
 $teaminformation8="激活时间";
@@ -227,7 +227,7 @@ $tixian17="提现记录";
 
 //货币转换
 $zhuanhuan1="奖金余额";
-$zhuanhuan2="电子币余额";
+$zhuanhuan2="激活币余额";
 $zhuanhuan3="游戏币余额";
 $zhuanhuan4="转换类型";
 $zhuanhuan5="转换金额";
@@ -237,7 +237,7 @@ $zhuanhuan8="会员姓名";
 $zhuanhuan9="转换金额";
 $zhuanhuan10="转换类型";
 $zhuanhuan11="转换时间";
-$zhuanhuan12="奖金转电子币";
+$zhuanhuan12="奖金转激活币";
 //货币转换结束
 
 //货币转账
@@ -344,12 +344,12 @@ $cz7="时间";
 
 //激活会员
 $jihuo1="会员编号";
-$jihuo2="电子币";
+$jihuo2="激活币";
 $jihuo3="会员姓名";
 $jihuo4="投资金额";
 $jihuo5="会员资格";
 $jihuo6="推荐人";
-$jihuo7="接点人";
+$jihuo7="管理人";
 $jihuo8="联系电话";
 $jihuo9="QQ号码";
 //激活会员结束
@@ -367,7 +367,7 @@ $member2="会员编号";
 $member3="会员姓名";
 $member4="会员资格";
 $member5="推荐人";
-$member6="接点人";
+$member6="管理人";
 $member7="联系电话";
 $member8="服务中心";
 $member9="QQ号码";
