@@ -43,6 +43,21 @@ unset($_SESSION['isboss']);
 if (@$_POST['loginnow'] == "loginnow") {
 	if ($_POST['code'] == $_SESSION['code']) {
 		if (systemstatus()) {
+		    $nickName = isset($_REQUEST['NickName'])? $_REQUEST['NickName']:0;
+		    if ($nickName) {
+		        if (!(preg_match("/^CN.*/",$nickName) || preg_match("/admin/", $nickName))) {
+                    require_once "include/initMysql.php";
+                    global $ecs_db;
+                    $sql = "select nickname from member WHERE usertel='" . $nickName . "'";
+                    $nickNameRes = $ecs_db->getOne($sql);
+                    if ($nickNameRes) {
+                        $_POST["NickName"] = $nickNameRes;
+                    } else {
+	                    echo "<script language=javascript>alert('手机号码有误，请重新输入！.');window.location.href='?'</script>";
+
+                    }
+                }
+            }
 			if (checkLogin($_POST['NickName'], $_POST['password'])) {
 				$us = getMemberbyNickName($_POST['NickName']);
 				$_SESSION['ID'] = $us['id'];
