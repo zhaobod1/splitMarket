@@ -2,3 +2,8 @@
 /.DS_Store
 /splitMarket.sql
 /splitMarket_db.sql
+node_modules/
+gulpfile.js
+package.json
+
+aspnet_client/
