@@ -7,6 +7,32 @@ function dd($arr,$useDie=true) {
 		die;
 	}
 }
+
+/**
+ * 检测手机号是否已经存在，存在返回 TRUE，不存在返回 FALSE。
+ * @param string $mobile
+ * @param integer $userId
+ * @return bool
+ */
+function checkMobileIsExisted($mobile, $userId) {
+	global $ecs_db;
+	$sql = "select count(*) from member WHERE usertel='".$mobile."' and userid=" . $userId;
+	$res = $ecs_db->getOne($sql);
+	if ($res) {
+		return false; //自己的手机存在相当于不存在。
+	} else {
+		$sql = "select count(*) from member WHERE usertel='".$mobile."' and userid <> " . $userId;
+		$res = $ecs_db->getOne($sql);
+		if ($res) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
+}
+
 //获取当前时间
 function now(){
 	date_default_timezone_set('PRC');

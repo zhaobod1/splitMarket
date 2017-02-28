@@ -46,6 +46,9 @@ if ($_POST['submit']){
 		$_us['usercard']=$_POST['UserCard'];
 		$_us['username']=$_POST['UserName'];
 		$_us['usertel']=$_POST['UserTel'];
+		if (checkMobileIsExisted($_us['usertel'], $ID)) {
+			echo "<script language=javascript>alert('手机号码已经存在请重试！');window.location.href='?id=".$ID."'</script>";
+		}
 		$_us['useraddress']=$_POST['UserAddress'];
 		$_us['userqq']=$_POST['UserQQ'];
 		$_us['bankname']=$_POST['BankName'];
