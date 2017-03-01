@@ -60,6 +60,8 @@ if ($_POST['submit']) {
 								$row['num'] = 0;
 								$row['isjs'] = 1;
 								edit_update_cl('stockbuy', $row, $row['id']);
+								//记录买家
+								array_push($aIsSaled, $us['id']);
 								//记录卖出的买家
 								array_push($aIsSaled, $row['uid']);
 							} else {
@@ -88,6 +90,8 @@ if ($_POST['submit']) {
 								edit_sql("update `systemparameters` set peprice=" . $row['price'] . " where id=1");
 								$row['num'] = $row['num'] - $num;
 								edit_update_cl('stockbuy', $row, $row['id']);
+								//记录买家
+								array_push($aIsSaled, $us['id']);
                                 //记录卖出的买家
 								array_push($aIsSaled, $row['uid']);
 								$num = 0;
@@ -107,14 +111,17 @@ if ($_POST['submit']) {
 					//$bonus_cl->b5bonus();
 					//$bonus_cl->b0bonus();
 					if (count($aIsSaled)) {
+						$aIsSaled = array_unique($aIsSaled);
 						//有卖出
 						require_once "../include/cls_sms.php";
 						require_once "../include/initMysql.php";
 						global $ecs_db;
 						foreach ($aIsSaled as $uid) {
-							$sql = "select usertel from `member` WHERE userid=" . $uid;
+							$sql = "select usertel from `member` WHERE id=" . $uid;
 							$mobile = $ecs_db->getOne($sql);
-							$oSms = new Sms($mobile, $uid);
+							$sql = "select userid from `member` WHERE id=" . $uid;
+							$userId = $ecs_db->getOne($sql);
+							$oSms = new Sms($mobile, $userId);
 							$oRes = $oSms->sendSms();
 						}
 					}
@@ -158,6 +165,8 @@ if ($_POST['submit']) {
 									//$bonus_cl->b0bonus();
 									edit_sql("update `member` set pe=pe+" . $num . " where id=" . $row['uid'] . "");
 									edit_sql("update `systemparameters` set peprice=" . $row['price'] . " where id=1");
+									//记录买家
+									array_push($aIsSaled, $us['id']);
 									//记录卖出的买家
 									array_push($aIsSaled, $row['uid']);
 									$num = 0;
@@ -189,6 +198,8 @@ if ($_POST['submit']) {
 									$row['isjs'] = 1;
 									$row['num'] = 0;
 									edit_update_cl('stockbuy', $row, $row['id']);
+									//记录买家
+									array_push($aIsSaled, $us['id']);
 									//记录卖出的买家
 									array_push($aIsSaled, $row['uid']);
 								}
@@ -207,14 +218,17 @@ if ($_POST['submit']) {
 						//$bonus_cl->b5bonus();
 						//$bonus_cl->b0bonus();
 						if (count($aIsSaled)) {
+							$aIsSaled = array_unique($aIsSaled);
 							//有卖出
 							require_once "../include/cls_sms.php";
 							require_once "../include/initMysql.php";
 							global $ecs_db;
 							foreach ($aIsSaled as $uid) {
-								$sql = "select usertel from `member` WHERE userid=" . $uid;
+								$sql = "select usertel from `member` WHERE id=" . $uid;
 								$mobile = $ecs_db->getOne($sql);
-								$oSms = new Sms($mobile, $uid);
+								$sql = "select userid from `member` WHERE id=" . $uid;
+								$userId = $ecs_db->getOne($sql);
+								$oSms = new Sms($mobile, $userId);
 								$oRes = $oSms->sendSms();
 							}
 						}
