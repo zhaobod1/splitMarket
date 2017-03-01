@@ -11,13 +11,13 @@ checkqx(6,22);
 if($_POST['button']){
 		$_system=new system_class();
 		$systemparameters['id']=1;
-		$systemparameters['qzbs']=$_POST['qzbs'];
-		$systemparameters['txbs']=$_POST['txbs'];
-		$systemparameters['txmix']=$_POST['txmix'];
-		$systemparameters['txsl']=$_POST['txsl'];
-		$systemparameters['wlf']=$_POST['wlf'];
-		$systemparameters['xtkg']=$_POST['xtkg'];
-		$systemparameters['ispe']=$_POST['ispe'];
+		$systemparameters['qzbs']=$_POST['qzbs'];//强制卖出倍数
+		$systemparameters['txbs']=$_POST['txbs'];//提现倍数
+		$systemparameters['txmix']=$_POST['txmix'];//提现最小金额
+		$systemparameters['txsl']=$_POST['txsl'];//提现手续费
+		$systemparameters['wlf']=$_POST['wlf'];//网络维护费
+		$systemparameters['xtkg']=$_POST['xtkg'];//统系开关
+		$systemparameters['ispe']=$_POST['ispe'];//PE币交易开关
 		$systemparameters['azkg']=$_POST['azkg'];
 		$systemparameters['tjkg']=$_POST['tjkg'];
 		$systemparameters['ziliao']=$_POST['ziliao'];

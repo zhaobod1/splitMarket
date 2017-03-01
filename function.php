@@ -380,6 +380,7 @@ function edit_update_cl($table,$err,$id){
 	}      
 	$sql = substr($sql, 0, strlen($sql)-2) .  " WHERE id=".$id;
 
+
 	@mysql_query($sql) or die (mysql_error());
 }
 
@@ -418,12 +419,12 @@ n=数量
 function addgupiaolist($t,$p,$n){
 	$system_cl=new system_class();
 	$sys=$system_cl->system_information(1);
-	$sql="select * from `stockprice` where year(sdate)=".date("Y",$t)." and month(sdate)=".date("m",$t)." and day(sdate)=".date("d",$t)."";
+	$sql="select * from `stockprice` where year(sdate)=".date("Y",$t)." and month(sdate)=".date("m",$t)." and day(sdate)=".date("d",$t)." ";
 	if ($query=mysql_query($sql)){
 		if(mysql_num_rows($query)>0){
 			while($row=mysql_fetch_array($query)){
 				$stockprice=NULL;
-				$stockprice['price']=$sys['peprice'];
+				$stockprice['price']=$sys['peprice'];//当时价格
 				$stockprice['num']=$row['num']+$n;
 				edit_update_cl("stockprice",$stockprice,$row['id']);
 			}

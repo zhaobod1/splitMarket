@@ -52,7 +52,7 @@ if (huo15_get_client_ip() == "127.0.0.1") {
 	$config_dbname="splitMarket_db";
 }
 
-
+define("IN_HUO15", true);
 
 /*$config_ip="localhost";
 $config_name="qdcms";

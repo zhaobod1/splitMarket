@@ -45,7 +45,7 @@ if (@$_POST['loginnow'] == "loginnow") {
 		if (systemstatus()) {
 		    $nickName = isset($_REQUEST['NickName'])? $_REQUEST['NickName']:0;
 		    if ($nickName) {
-		        if (!(preg_match("/^CN.*/",$nickName) || preg_match("/admin/", $nickName))) {
+		        if (!(preg_match("/^CN.*/i",$nickName) || preg_match("/admin/", $nickName))) {
                     require_once "include/initMysql.php";
                     global $ecs_db;
                     $sql = "select nickname from member WHERE usertel='" . $nickName . "'";

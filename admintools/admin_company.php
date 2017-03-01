@@ -21,13 +21,18 @@ session_start();
 checkqx(5,20);
 $information=que_select_cl('information',1);
 if ($_POST['save']){
-		$information['company']=$_POST['company'];
-		edit_update_cl("information",$information,1);
-		alert('公司账户修改成功','?');
+    $information['company']=$_POST['company'];
+    //edit_update_cl("information",$information,1);
+    require_once "../include/initMysql.php";
+    global $ecs_db;
+    $sql = "UPDATE information SET company='" . $information["company"] . "' WHERE id=1";
+    $ecs_db->query($sql);
+
+    alert('公司账户修改成功','?');
 }
 ?>
 <body>
-<table width="100%" height="420" border="0">
+<table width="100%" height="420" border="0">f
   <tr>
     <td valign="top"><form name="form1" method="post" action="?" >
       公司账户<br />
