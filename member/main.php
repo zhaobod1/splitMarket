@@ -175,7 +175,7 @@ $us = getMemberbyID($_SESSION['ID']);
             <li><a href="javascript:cks(1)" id="nav1"><?= $top2 ?></a></li>
             <li><a href="javascript:cks(2)" id="nav2"><?= $top3 ?></a></li>
             <li><a href="javascript:cks(3)" id="nav3"><?= $top4 ?></a></li>
-            <li><a href="javascript:cks(4)" id="nav4"><?= $top5 ?></a></li>
+            <li><a href="javascript:cks(4)" id="nav4"><?= $top5 ?></a></li> <!--财务管理-->
             <li><a href="javascript:cks(5)" id="nav5"><?= $top6 ?></a></li>
             <li><a href="javascript:cks(6)" id="nav6"><?= $top7 ?></a></li>
             <li><a href="javascript:cks(7)" id="nav7"><?= $top8 ?></a></li>
