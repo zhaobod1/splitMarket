@@ -7,3 +7,4 @@ gulpfile.js
 package.json
 
 aspnet_client/
+*.sql
