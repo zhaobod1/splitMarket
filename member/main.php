@@ -210,7 +210,7 @@ $us = getMemberbyID($_SESSION['ID']);
         <ul class="sub" id="menu4" style="display:none">
             <li><a href="javascript:SetUrl('37')" onclick="menuclickdo('<?= $menu12 ?>')"><?= $menu12 ?></a></li>
             <li><a href="javascript:SetUrl('48')" onclick="menuclickdo('<?= $menu13 ?>')"><?= $menu13 ?></a></li>
-            <li><a href="javascript:SetUrl('12')" onclick="menuclickdo('<?= $menu14 ?>')"><?= $menu14 ?></a></li>
+            <li><a href="javascript:SetUrl('12')" onclick="menuclickdo('<?= $menu14 ?>')"><?= $menu14 ?></a></li> <!--奖金提现-->
             <li><a href="javascript:SetUrl('16')" onclick="menuclickdo('<?= $menu15 ?>')"><?= $menu15 ?></a></li>
             <li><a href="javascript:SetUrl('18')" onclick="menuclickdo('<?= $menu16 ?>')"><?= $menu16 ?></a></li>
 
@@ -338,7 +338,7 @@ $us = getMemberbyID($_SESSION['ID']);
 				?>
             </ul>
             <h2>
-                <span>企业备用金</span>
+                <span>护盘备用金</span>
             </h2>
             <ul>
                 <li><a id="pettyCash" href="#"></a></li>

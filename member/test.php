@@ -29,7 +29,7 @@ if ($_yid == 4){$_html="TeamInformation.php";}
 if ($_yid == 5){$_html="treeview.php";}
 if ($_yid == 6){$_html="wlt2.php";}
 if ($_yid == 11){$_html="xheditor/newsmanage.php";}
-if ($_yid == 12){$_html="tixian.php";}
+if ($_yid == 12){$_html="tixian.php";} //提现
 if ($_yid == 14){$_html="chongzhi.php";}
 if ($_yid == 16){$_html="zhuanhuan.php";}
 if ($_yid == 18){$_html="zhuanzhang.php";}

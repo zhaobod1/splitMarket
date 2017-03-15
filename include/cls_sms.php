@@ -30,7 +30,20 @@ class Sms {
 		$this->sendUrl = $this->url . "?mobile=" . $this->mobile . "&content=" . urlencode($this->content) . "&key=" . $this->key;
 	}
 
+	function changeMsg($msg)
+	{
+		$this->content = "【中豪国际】".trim($msg);
+		$this->sendUrl = $this->url . "?mobile=" . $this->mobile . "&content=" . urlencode($this->content) . "&key=" . $this->key;
+
+	}
+	/**
+	 * @return object 失败{"reason":"40001 ","count":0,"error_code":0}, 成功{"reason":"10000","count":1,"error_code":1}
+	 */
 	function sendSms() {
+		/****失败示例**/
+		//{"reason":"40001 ","count":0,"error_code":0}
+		/****成功示例**/
+		//{"reason":"10000","count":1,"error_code":1}
 		$res =  $this->curlHttpGet();
 		return json_decode($res);
 	}

@@ -1,6 +1,6 @@
 <?php
 ob_start();
-error_reporting(0);
+error_reporting(E_ERROR);
 import_request_variables('pg');
 function huo15_get_client_ip()
 {

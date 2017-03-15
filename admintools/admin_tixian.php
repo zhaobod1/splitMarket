@@ -131,6 +131,7 @@ function exportExcel(DivID){
       </tr>
       <tr>
       	<td height="21" align="center"><input type="checkbox" name="checkbox" value="checkbox" onClick="javascript:SelectAll()"></td>
+        <td align="center">订单号</td>
         <td align="center">会员编号</td>
         <td align="center">会员姓名</td>
         <td align="center">提现金额</td>
@@ -175,6 +176,7 @@ function exportExcel(DivID){
 	  ?>
       <tr>
       	<td height="21" align="center"><input type="checkbox" name="UID[]" id="UID" value="<?=$row['id']?>"></td>
+        <td align="center"><?=$row['source']?></td>
         <td align="center"><?=$row['nickname']?></td>
         <td align="center"><?=$row['username']?></td>
         <td align="center"><?=$row['jine']?></td>
