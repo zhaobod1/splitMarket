@@ -26,4 +26,23 @@ function sendSmsToAdminAndClient($userPhone, $order_sn) {
 	$oSms2->sendSms();
 }
 
+/**
+ * 积分兑换
+ * @param integer $userId 用户的ID $us['userid']
+ * @param integer $sourcePoint 要兑换的金币数 设置比例
+ * @param integer $targetPoint 要兑换目标应用的币数 设置比例
+ * @param integer $targetAPP 目标应用ID
+ * @param integer $targetAmount 目标应用兑换的币数量
+ * @return bool 1 兑换成功，0 兑换失败
+ */
+function addShopCoin($userId,$sourcePoint,$targetPoint,$targetAPP,$targetAmount) {
+	include_once "../include/config.inc.php";
+	include_once   "../uc_client/client.php";
+	list($uid, $username, $password, $email) = uc_get_user($userId);
+
+	$res = uc_credit_exchange_request($uid,$sourcePoint, $targetPoint,$targetAPP,$targetAmount);
+	return $res;
+
+}
+
 

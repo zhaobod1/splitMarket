@@ -66,7 +66,7 @@ if($_POST['button3']){
 
 
 
-							/* 青岛火一五信息科技有限公司huo15.com 日期：2017/1/7 */
+							/* 青岛火一五信息科技有限公司huo15.com 激活会员赠送商城币 日期：2017/1/7 */
 							include_once "../include/config.inc.php";
 							include_once   "../uc_client/client.php";
 							$GLOBALS['db'] = uc_api_mysql("user","ReturnDb");
@@ -77,13 +77,13 @@ if($_POST['button3']){
 							$sRes = $GLOBALS['db']->fetch_first($sql);
 							$oPointsRule = uc_unserialize($sRes['value']);
 							$oPointsRule = $oPointsRule[0];
-
+                            // user_id, 0,1,1, amount
 							$res = uc_credit_exchange_request($uid,$oPointsRule['creditsrc'], $oPointsRule['creditdesc'],$oPointsRule['appiddesc'],intval($us['lsk'])*7);
 							if (!$res) {
 								echo "<script language=javascript>alert('同步积分出错！请联系管理员解决。.');</script>";
 								die;
 							}
-							/* 青岛火一五信息科技有限公司huo15.com 日期：2017/1/7 end */
+							/* 青岛火一五信息科技有限公司huo15.com 激活会员赠送商城币 日期：2017/1/7 end */
 
 							$_member->jihuomember($us['id']);
 							$me_update['zsq']=$me['zsq']-$us['lsk'];

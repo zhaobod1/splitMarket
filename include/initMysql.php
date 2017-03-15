@@ -16,6 +16,7 @@ date_default_timezone_set("Etc/GMT-8");
 define('IN_HUO15', true);
 define('EC_CHARSET', 'utf-8');
 define("ADMIN_PHONE", "18050782016");
+define("YXB_SHOPCOIN", 7);
 if (!ROOT_PATH) {
 	define('ROOT_PATH', dirname(__FILE__).'/..');
 
