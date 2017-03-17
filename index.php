@@ -1,9 +1,9 @@
 <?php
 include("function.php");
-header("Content-Type: text/html;charset=utf-8");
-error_reporting(E_ALL);
-session_start();
 
+header("Content-Type: text/html;charset=utf-8");
+error_reporting(E_ERROR);
+session_start();
 define('ROOT_PATH', str_replace('index.php', '', str_replace('\\', '/', __FILE__)));
 
 if (@$_GET['lang'] == "") {

@@ -1,6 +1,13 @@
 <?php
 include("conn.php");
 include_once "include/initMysql.php";
+
+
+
+
+
+
+
 function dd($arr,$useDie=true) {
 	var_dump($arr);
 	if ($useDie) {

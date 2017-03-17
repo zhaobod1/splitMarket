@@ -1,7 +1,7 @@
 <?php
 ob_start();
-error_reporting(E_ERROR);
-import_request_variables('pg');
+error_reporting(E_ALL);
+//import_request_variables('pg');
 function huo15_get_client_ip()
 {
 	if ($_SERVER['REMOTE_ADDR']) {
@@ -53,7 +53,6 @@ if (huo15_get_client_ip() == "127.0.0.1") {
 }
 
 define("IN_HUO15", true);
-
 /*$config_ip="localhost";
 $config_name="qdcms";
 $config_pass="huo15.com";
