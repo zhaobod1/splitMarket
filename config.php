@@ -42,14 +42,14 @@ if ( !ini_get('register_globals') )
 }
 if (huo15_get_client_ip() == "127.0.0.1") {
 	$config_ip="211.149.214.242";
-	$config_name="splitMarket";
+	$config_name="splitmarket";
 	$config_pass="huo15com";
-	$config_dbname="splitMarket_db";
+	$config_dbname="splitmarket";
 } else {
 	$config_ip="localhost";
-	$config_name="splitMarket";
+	$config_name="splitmarket";
 	$config_pass="huo15com";
-	$config_dbname="splitMarket_db";
+	$config_dbname="splitmarket";
 }
 
 define("IN_HUO15", true);

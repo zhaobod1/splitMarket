@@ -1,8 +1,8 @@
 <?php 
 define('UC_DBHOST', 'localhost');
-define('UC_DBUSER', 'splitMarket');
+define('UC_DBUSER', 'splitmarket');
 define('UC_DBPW', 'huo15com');
-define('UC_DBNAME', 'splitMarket_db');
+define('UC_DBNAME', 'splitmarket');
 define('UC_DBCHARSET', 'utf8');
 define('UC_DBTABLEPRE', 'uc_');
 define('UC_COOKIEPATH', '/');

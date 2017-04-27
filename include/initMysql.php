@@ -13,19 +13,22 @@ header("Content-Type:text/html;charset=utf-8");
 date_default_timezone_set("Etc/GMT-8");
 //error_reporting(E_ALL ^ E_NOTICE);
 
-define('IN_HUO15', true);
+if (!defined("IN_HUO15")) {
+	define('IN_HUO15', true);
+
+}
 define('EC_CHARSET', 'utf-8');
 define("ADMIN_PHONE", "18050782016");
 define("YXB_SHOPCOIN", 7);
-if (!ROOT_PATH) {
+if (!defined("ROOT_PATH")) {
 	define('ROOT_PATH', dirname(__FILE__).'/..');
 
 }
 define('DATA_DIR', 'data');
 
 $db_host = "localhost:3306";
-$db_name = "splitMarket_db";
-$db_user = "splitMarket";
+$db_name = "splitmarket";
+$db_user = "splitmarket";
 $db_pass = "huo15com";
 
 require_once 'cls_mysql.php';
